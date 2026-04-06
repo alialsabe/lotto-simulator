@@ -14,11 +14,24 @@ import {
 import { SiteShell } from "@/components/site-shell";
 
 // ─── Types ───────────────────────────────────────────────────────
+interface PrizeTier {
+  prize: number;
+  remaining: number;
+  claimed: number;
+}
+
 interface ScratcherGame {
   name: string;
   gameNumber: string;
   score: number;
   price: number;
+  details?: {
+    ticketsRemaining?: number;
+    ticketsPrinted?: number;
+    currentEV?: number;
+    oddsOfWinning?: string;
+    prizeTiers?: PrizeTier[];
+  };
 }
 
 interface ScratchersData {
@@ -81,62 +94,82 @@ function runScratcherSim(
 ): ScratchSimResult {
   const totalTickets = ticketsPerWeek * 52 * years;
   const totalSpent = totalTickets * game.price;
+  const tiers = game.details?.prizeTiers;
+  const ticketsRemaining = game.details?.ticketsRemaining;
 
-  // Score = estimated return %. A score of 78 means you get back ~78 cents per dollar.
-  // Real scratchers: ~30% of tickets are "winners" (return ≥ ticket price).
-  // But many "winners" just break even. We model this with tiers.
-  //
-  // Payout tiers (per winning ticket):
-  //   70% of wins → break even (1x price)
-  //   20% of wins → 3x price
-  //   8% of wins  → 10x price
-  //   1.9% of wins → 50x price
-  //   0.1% of wins → 500x price
-  //
-  // Expected payout per win = 0.7*1 + 0.2*3 + 0.08*10 + 0.019*50 + 0.001*500
-  //                        = 0.7 + 0.6 + 0.8 + 0.95 + 0.5 = 3.55x
-  //
-  // To hit a return rate of R = score/100:
-  //   winChance × 3.55 = R  →  winChance = R / 3.55
-  //   e.g. score 78 → winChance = 0.78/3.55 = 22%
-  //   e.g. score 50 → winChance = 0.50/3.55 = 14%
-  //   e.g. score 131 → winChance = 1.31/3.55 = 37% (but capped)
+  // Build probability table from real prize tiers if available
+  // Otherwise fall back to score-based model
+  let prizeTable: { prize: number; prob: number }[] = [];
+  let loseChance = 1;
+  let returnRate = game.score / 100;
 
-  const returnRate = game.score / 100;
-  const avgPayoutMultiplier = 3.55; // from the tier distribution above
-  const winChance = Math.min(returnRate / avgPayoutMultiplier, 0.45); // cap at 45%
+  if (tiers && ticketsRemaining && ticketsRemaining > 0) {
+    // Real data: probability of each prize = remaining / ticketsRemaining
+    for (const tier of tiers) {
+      const prob = tier.remaining / ticketsRemaining;
+      prizeTable.push({ prize: tier.prize, prob });
+      loseChance -= prob;
+    }
+    if (game.details?.currentEV) {
+      returnRate = game.details.currentEV / 100;
+    }
+  } else {
+    // Score-based fallback model
+    // Payout tiers: 70% break even, 20% at 3x, 8% at 10x, 1.9% at 50x, 0.1% at 500x
+    const avgPayoutMultiplier = 3.55;
+    const winChance = Math.min(returnRate / avgPayoutMultiplier, 0.45);
+    prizeTable = [
+      { prize: game.price * 500, prob: winChance * 0.001 },
+      { prize: game.price * 50, prob: winChance * 0.019 },
+      { prize: game.price * 10, prob: winChance * 0.08 },
+      { prize: game.price * 3, prob: winChance * 0.2 },
+      { prize: game.price, prob: winChance * 0.7 },
+    ];
+    loseChance = 1 - winChance;
+  }
+
+  // Build cumulative distribution for sampling
+  const cumTable: { prize: number; cumProb: number }[] = [];
+  let cum = 0;
+  for (const p of prizeTable) {
+    cum += p.prob;
+    cumTable.push({ prize: p.prize, cumProb: cum });
+  }
+
+  function samplePrize(): { payout: number; isTop: boolean } {
+    const r = Math.random();
+    if (r < loseChance) return { payout: 0, isTop: false };
+    const adjR = (r - loseChance) / (1 - loseChance); // normalize to [0, 1] within wins
+    let running = 0;
+    for (const p of prizeTable) {
+      running += p.prob / (1 - loseChance);
+      if (adjR < running) {
+        return { payout: p.prize, isTop: p.prize >= game.price * 100 };
+      }
+    }
+    return { payout: prizeTable[prizeTable.length - 1]?.prize ?? 0, isTop: false };
+  }
 
   const finalNets: number[] = [];
   const bands = [
-    { name: "Lost it all", test: (v: number) => v <= -totalSpent * 0.7, count: 0 },
-    { name: "Heavy loss", test: (v: number) => v > -totalSpent * 0.7 && v <= -totalSpent * 0.3, count: 0 },
-    { name: "Moderate loss", test: (v: number) => v > -totalSpent * 0.3 && v < -game.price * 5, count: 0 },
+    { name: "Lost >70%", test: (v: number) => v <= -totalSpent * 0.7, count: 0 },
+    { name: "Lost 30-70%", test: (v: number) => v > -totalSpent * 0.7 && v <= -totalSpent * 0.3, count: 0 },
+    { name: "Lost <30%", test: (v: number) => v > -totalSpent * 0.3 && v < -game.price * 5, count: 0 },
     { name: "Break even ±", test: (v: number) => Math.abs(v) < game.price * 5, count: 0 },
-    { name: "Small profit", test: (v: number) => v >= game.price * 5 && v < totalSpent * 0.2, count: 0 },
-    { name: "Big winner", test: (v: number) => v >= totalSpent * 0.2, count: 0 },
+    { name: "Won <30%", test: (v: number) => v >= game.price * 5 && v < totalSpent * 0.3, count: 0 },
+    { name: "Won >30%", test: (v: number) => v >= totalSpent * 0.3, count: 0 },
   ];
 
   let totalWonAll = 0;
   let topPrizeHits = 0;
 
-  function sampleWinPayout(): { payout: number; isTop: boolean } {
-    const r = Math.random();
-    if (r < 0.001) return { payout: game.price * 500, isTop: true };  // 0.1% → 500x
-    if (r < 0.02)  return { payout: game.price * 50, isTop: false };   // 1.9% → 50x
-    if (r < 0.10)  return { payout: game.price * 10, isTop: false };   // 8%   → 10x
-    if (r < 0.30)  return { payout: game.price * 3, isTop: false };    // 20%  → 3x
-    return { payout: game.price, isTop: false };                       // 70%  → break even
-  }
-
   for (let t = 0; t < trials; t++) {
     let net = 0;
     for (let i = 0; i < totalTickets; i++) {
       net -= game.price;
-      if (Math.random() < winChance) {
-        const { payout, isTop } = sampleWinPayout();
-        net += payout;
-        if (isTop) topPrizeHits++;
-      }
+      const { payout, isTop } = samplePrize();
+      net += payout;
+      if (isTop) topPrizeHits++;
     }
     finalNets.push(Math.round(net));
     totalWonAll += Math.max(0, net);
@@ -146,6 +179,7 @@ function runScratcherSim(
   }
 
   const avgNet = finalNets.reduce((a, b) => a + b, 0) / trials;
+  const winChance = 1 - loseChance;
 
   return {
     ticketsPerWeek,

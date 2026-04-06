@@ -9,7 +9,80 @@
           "name": "SCORCHING HOT 7s",
           "gameNumber": "1597",
           "score": 131,
-          "price": 10
+          "price": 10,
+          "details": {
+            "ticketsRemaining": 627634,
+            "ticketsPrinted": 16232400,
+            "currentEV": 130.83,
+            "oddsOfWinning": "1 in 3.39",
+            "prizeTiers": [
+              {
+                "prize": 2000000,
+                "remaining": 2,
+                "claimed": 2
+              },
+              {
+                "prize": 10000,
+                "remaining": 4,
+                "claimed": 96
+              },
+              {
+                "prize": 5000,
+                "remaining": 17,
+                "claimed": 528
+              },
+              {
+                "prize": 1000,
+                "remaining": 215,
+                "claimed": 4116
+              },
+              {
+                "prize": 500,
+                "remaining": 508,
+                "claimed": 17486
+              },
+              {
+                "prize": 200,
+                "remaining": 887,
+                "claimed": 26111
+              },
+              {
+                "prize": 100,
+                "remaining": 4262,
+                "claimed": 130886
+              },
+              {
+                "prize": 50,
+                "remaining": 8851,
+                "claimed": 261504
+              },
+              {
+                "prize": 30,
+                "remaining": 8723,
+                "claimed": 261699
+              },
+              {
+                "prize": 25,
+                "remaining": 9082,
+                "claimed": 261528
+              },
+              {
+                "prize": 20,
+                "remaining": 39830,
+                "claimed": 1042330
+              },
+              {
+                "prize": 15,
+                "remaining": 31987,
+                "claimed": 779675
+              },
+              {
+                "prize": 10,
+                "remaining": 80613,
+                "claimed": 1865994
+              }
+            ]
+          }
         },
         {
           "name": "FLORIDA 300X THE CASH",
