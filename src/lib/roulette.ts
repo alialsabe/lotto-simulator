@@ -165,11 +165,11 @@ export function runRouletteSimulation(params: RouletteParams, trials: number): R
   const bestValue = sorted[sorted.length - 1] ?? 0;
 
   const outcomeBands = [
-    { name: "Lost big (>90%)", test: (v: number) => v <= -(totalWagered * 0.05) * 3 },
-    { name: "Lost moderate", test: (v: number) => v <= -(totalWagered * 0.01) && v > -(totalWagered * 0.05) * 3 },
-    { name: "Lost small", test: (v: number) => v < 0 && v > -(totalWagered * 0.01) },
-    { name: "Break even ±", test: (v: number) => Math.abs(v) < betPerSpin * 20 },
-    { name: "Won small", test: (v: number) => v > 0 && v < totalWagered * 0.01 },
+    { name: "Lost big (>90%)", test: (v: number) => v <= -(totalWagered * 0.9) },
+    { name: "Lost moderate", test: (v: number) => v > -(totalWagered * 0.9) && v <= -(totalWagered * 0.5) },
+    { name: "Lost small", test: (v: number) => v > -(totalWagered * 0.5) && v <= -(betPerSpin * 20) },
+    { name: "Break even ±", test: (v: number) => v > -(betPerSpin * 20) && v < betPerSpin * 20 },
+    { name: "Won small", test: (v: number) => v >= betPerSpin * 20 && v < totalWagered * 0.01 },
     { name: "Won big", test: (v: number) => v >= totalWagered * 0.01 },
   ].map((band) => ({
     name: band.name,
@@ -184,8 +184,8 @@ export function runRouletteSimulation(params: RouletteParams, trials: number): R
     totalWagered,
     expectedLoss: Math.round(totalWagered * HOUSE_EDGE[wheel][betType]),
     expectedReturnPct: parseFloat(((1 - HOUSE_EDGE[wheel][betType]) * 100).toFixed(1)),
-    avgLossPerPlayer: Math.round(Math.abs(avgNet)),
-    worstLoss: Math.abs(Math.round(worstValue)),
+    avgLossPerPlayer: Math.round(avgNet),
+    worstLoss: Math.round(worstValue),
     bestOutcome: Math.round(bestValue),
     redWins: Math.round(totalReds / trials),
     blackWins: Math.round(totalBlacks / trials),

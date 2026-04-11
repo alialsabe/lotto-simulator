@@ -56,6 +56,10 @@ function sliderFill(value: number, min: number, max: number, color: string) {
   };
 }
 
+function formatSignedCurrency(value: number) {
+  return value < 0 ? `-$${Math.abs(value).toLocaleString()}` : `+$${value.toLocaleString()}`;
+}
+
 const BAND_COLORS = ["#dc2626", "#f97316", "#eab308", "#6b7280", "#22c55e", "#06b6d4"];
 
 function MonteCarloResults({ sim, trials }: { sim: RouletteSimResult; trials: number }) {
@@ -73,9 +77,9 @@ function MonteCarloResults({ sim, trials }: { sim: RouletteSimResult; trials: nu
           </div>
           <div className="text-right">
             <div className="font-mono text-2xl font-black text-[#ff2040]">
-              ${sim.avgLossPerPlayer.toLocaleString()}
+              {formatSignedCurrency(sim.avgLossPerPlayer)}
             </div>
-            <div className="text-xs text-[#6b6b8a]">avg loss per player</div>
+            <div className="text-xs text-[#6b6b8a]">avg net per player</div>
           </div>
         </div>
 
@@ -147,7 +151,7 @@ function MonteCarloResults({ sim, trials }: { sim: RouletteSimResult; trials: nu
         </div>
 
         <div className="text-center text-xs text-[#6b6b8a]">
-          Worst session: ${sim.worstLoss.toLocaleString()} · Best session: ${sim.bestOutcome.toLocaleString()} · Longest win streak: {sim.longestWinStreak}
+          Worst session: {formatSignedCurrency(sim.worstLoss)} · Best session: {formatSignedCurrency(sim.bestOutcome)} · Longest win streak: {sim.longestWinStreak}
         </div>
       </div>
     </section>

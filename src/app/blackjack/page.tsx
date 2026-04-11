@@ -55,10 +55,16 @@ function sliderFill(value: number, min: number, max: number, color: string) {
 }
 
 function currencyCompact(value: number) {
-  if (Math.abs(value) >= 1_000_000_000) return `$${(value / 1_000_000_000).toFixed(1)}B`;
-  if (Math.abs(value) >= 1_000_000) return `$${(value / 1_000_000).toFixed(1)}M`;
-  if (Math.abs(value) >= 1_000) return `$${Math.round(value / 1_000)}K`;
-  return `$${Math.round(value).toLocaleString()}`;
+  const abs = Math.abs(value);
+  const prefix = value < 0 ? "-" : "";
+  if (abs >= 1_000_000_000) return `${prefix}$${(abs / 1_000_000_000).toFixed(1)}B`;
+  if (abs >= 1_000_000) return `${prefix}$${(abs / 1_000_000).toFixed(1)}M`;
+  if (abs >= 1_000) return `${prefix}$${Math.round(abs / 1_000)}K`;
+  return `${prefix}$${Math.round(abs).toLocaleString()}`;
+}
+
+function formatSignedCurrency(value: number) {
+  return value < 0 ? `-$${Math.abs(value).toLocaleString()}` : `+$${value.toLocaleString()}`;
 }
 
 const BAND_COLORS = ["#dc2626", "#f97316", "#eab308", "#6b7280", "#22c55e", "#06b6d4"];
@@ -78,9 +84,9 @@ function MonteCarloResults({ sim, trials }: { sim: BlackjackSimResult; trials: n
           </div>
           <div className="text-right">
             <div className="font-mono text-2xl font-black text-[#ff2040]">
-              ${sim.avgLossPerPlayer.toLocaleString()}
+              {currencyCompact(sim.avgLossPerPlayer)}
             </div>
-            <div className="text-xs text-[#6b6b8a]">avg loss per player</div>
+            <div className="text-xs text-[#6b6b8a]">avg net per player</div>
           </div>
         </div>
 
@@ -154,11 +160,11 @@ function MonteCarloResults({ sim, trials }: { sim: BlackjackSimResult; trials: n
         {/* Best / Worst */}
         <div className="grid grid-cols-2 gap-3 mb-5">
           <div className="bg-[#030014] rounded-xl p-3 border border-[#00ff87]/30 text-center">
-            <div className="font-mono font-black text-[#00ff87]">+${sim.bestPlayerProfit.toLocaleString()}</div>
+            <div className="font-mono font-black text-[#00ff87]">{formatSignedCurrency(sim.bestPlayerProfit)}</div>
             <div className="text-xs text-[#6b6b8a] mt-0.5">best player profit</div>
           </div>
           <div className="bg-[#030014] rounded-xl p-3 border border-[#ff2040]/30 text-center">
-            <div className="font-mono font-black text-[#ff2040]">-${sim.worstPlayerLoss.toLocaleString()}</div>
+            <div className="font-mono font-black text-[#ff2040]">{formatSignedCurrency(sim.worstPlayerLoss)}</div>
             <div className="text-xs text-[#6b6b8a] mt-0.5">worst player loss</div>
           </div>
         </div>

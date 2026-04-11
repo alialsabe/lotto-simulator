@@ -174,11 +174,11 @@ export function runBlackjackSimulation(
     {
       name: "Moderate loss",
       test: (v: number) =>
-        v > -(totalWagered * edge * 2) && v < -(betPerHand * 10),
+        v > -(totalWagered * edge * 2) && v <= -(betPerHand * 10),
     },
     {
       name: "Break even ±",
-      test: (v: number) => Math.abs(v) < betPerHand * 10,
+      test: (v: number) => v > -(betPerHand * 10) && v < betPerHand * 10,
     },
     {
       name: "Small profit",
@@ -203,11 +203,11 @@ export function runBlackjackSimulation(
     totalWagered,
     expectedLoss: Math.round(totalWagered * edge),
     expectedReturnPct: parseFloat(((1 - edge) * 100).toFixed(1)),
-    avgLossPerPlayer: Math.round(Math.abs(avgNet)),
-    worstLoss: Math.abs(Math.round(worstValue)),
+    avgLossPerPlayer: Math.round(avgNet),
+    worstLoss: Math.round(worstValue),
     bestOutcome: Math.round(bestValue),
     bestPlayerProfit: Math.round(bestValue),
-    worstPlayerLoss: Math.abs(Math.round(worstValue)),
+    worstPlayerLoss: Math.round(worstValue),
     blackjacks: Math.round(totalBlackjacks / trials),
     busts: Math.round(totalBusts / trials),
     wins: Math.round(totalWins / trials),

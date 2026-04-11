@@ -51,9 +51,9 @@ function sampleTicketPrize(game: LotteryGame): { winnings: number; tier: string 
 
 export function runSimulation(params: SimParams): SimResult {
   const { weeklySpend, yearsPlayed, trials, game } = params;
-  const ticketsPerWeek = Math.floor(weeklySpend / TICKET_COST);
-  const totalTickets = ticketsPerWeek * 52 * yearsPlayed;
-  const totalSpent = totalTickets * TICKET_COST;
+  const totalTicketsPerPlayer = Math.floor((weeklySpend * 52 * yearsPlayed) / TICKET_COST);
+  const totalSpentPerPlayer = totalTicketsPerPlayer * TICKET_COST;
+  const totalSpent = totalSpentPerPlayer * trials;
 
   const finalNetValues: number[] = [];
   const prizeCounter = new Map<string, number>();
@@ -65,7 +65,7 @@ export function runSimulation(params: SimParams): SimResult {
   for (let t = 0; t < trials; t++) {
     let net = 0;
 
-    for (let i = 0; i < totalTickets; i++) {
+    for (let i = 0; i < totalTicketsPerPlayer; i++) {
       const { winnings, tier } = sampleTicketPrize(game);
       net -= TICKET_COST;
       if (winnings > 0) {
@@ -133,11 +133,11 @@ export function runSimulation(params: SimParams): SimResult {
     params,
     totalSpent,
     totalWon: Math.round(totalWon),
-    netLoss: Math.round(totalSpent * trials - totalWon),
-    avgLossPerPlayer: Math.round(Math.abs(avgNet)),
+    netLoss: Math.round(totalSpent - totalWon),
+    avgLossPerPlayer: Math.round(avgNet),
     histogram,
-    medianLoss: Math.abs(Math.round(medianValue)),
-    worstLoss: Math.abs(Math.round(worstValue)),
+    medianLoss: Math.round(medianValue),
+    worstLoss: Math.round(worstValue),
     bestOutcome: Math.round(bestValue),
     jackpotWins,
     secondPrizeWins,
@@ -154,8 +154,7 @@ export function calculateExpected(params: {
   game: LotteryGame;
 }) {
   const { weeklySpend, yearsPlayed, game } = params;
-  const ticketsPerYear = Math.floor(weeklySpend / TICKET_COST) * 52;
-  const totalTickets = ticketsPerYear * yearsPlayed;
+  const totalTickets = Math.floor((weeklySpend * 52 * yearsPlayed) / TICKET_COST);
   const totalSpent = totalTickets * TICKET_COST;
 
   let expectedWon = 0;

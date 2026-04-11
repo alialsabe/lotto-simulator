@@ -42,10 +42,12 @@ import AnimatedTextCycle from "@/components/ui/animated-text-cycle";
 import { Button } from "@/components/ui/button";
 
 function currencyCompact(value: number) {
-  if (Math.abs(value) >= 1_000_000_000) return `$${(value / 1_000_000_000).toFixed(1)}B`;
-  if (Math.abs(value) >= 1_000_000) return `$${(value / 1_000_000).toFixed(1)}M`;
-  if (Math.abs(value) >= 1_000) return `$${Math.round(value / 1_000)}K`;
-  return `$${Math.round(value).toLocaleString()}`;
+  const abs = Math.abs(value);
+  const prefix = value < 0 ? "-" : "";
+  if (abs >= 1_000_000_000) return `${prefix}$${(abs / 1_000_000_000).toFixed(1)}B`;
+  if (abs >= 1_000_000) return `${prefix}$${(abs / 1_000_000).toFixed(1)}M`;
+  if (abs >= 1_000) return `${prefix}$${Math.round(abs / 1_000)}K`;
+  return `${prefix}$${Math.round(abs).toLocaleString()}`;
 }
 
 function sliderFill(value: number, min: number, max: number, color: string) {
@@ -73,9 +75,9 @@ function MonteCarloResults({ sim }: { sim: SimResult }) {
           </div>
           <div className="text-right">
             <div className="font-mono text-2xl font-black text-[#ff2040]">
-              ${sim.avgLossPerPlayer.toLocaleString()}
+              {currencyCompact(sim.avgLossPerPlayer)}
             </div>
-            <div className="text-xs text-[#6b6b8a]">avg loss per player</div>
+            <div className="text-xs text-[#6b6b8a]">avg net per player</div>
           </div>
         </div>
 

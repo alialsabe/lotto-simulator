@@ -56,9 +56,10 @@ export function calculateLotto(params: {
 
   while (balance > 0 && monthsDebtFree < 600) {
     const interest = (24 / 100 / 12) * balance;
-    const principal = Math.min(monthlyPayment - interest, balance);
-    balance = Math.max(0, balance - principal);
-    totalPaid += monthlyPayment;
+    const amountDue = balance + interest;
+    const actualPayment = Math.min(monthlyPayment, amountDue);
+    balance = Math.max(0, amountDue - actualPayment);
+    totalPaid += actualPayment;
     monthsDebtFree++;
     if (balance <= 0) break;
   }
