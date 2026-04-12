@@ -5,7 +5,7 @@ import { FloatingMathSymbols } from "@/components/ui/floating-math";
 
 interface SiteShellProps {
   children: ReactNode;
-  active?: "lotto" | "blackjack" | "roulette" | "scratchers";
+  active?: "lotto" | "blackjack" | "roulette" | "scratchers" | "investing";
 }
 
 function NavLink({ href, label, active }: { href: string; label: string; active: boolean }) {
@@ -42,6 +42,7 @@ export function SiteShell({ children, active = "lotto" }: SiteShellProps) {
       <div className="relative z-20 max-w-5xl mx-auto px-6 pt-8 pb-16">
         <nav className="flex justify-center gap-3 mb-8 flex-wrap">
           <NavLink href="/" label="Lottery" active={active === "lotto"} />
+          <NavLink href="/investing" label="Investing" active={active === "investing"} />
           <NavLink href="/blackjack" label="Blackjack" active={active === "blackjack"} />
           <NavLink href="/roulette" label="Roulette" active={active === "roulette"} />
           <NavLink href="/scratchers" label="Scratchers" active={active === "scratchers"} />
