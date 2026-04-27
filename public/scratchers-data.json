@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-04-26T15:03:34.055577Z",
+  "scrapedAt": "2026-04-27T15:03:58.414939Z",
   "states": {
     "fl": {
       "name": "Florida",
@@ -12,9 +12,9 @@
           "score": 135,
           "price": 10,
           "details": {
-            "ticketsRemaining": 584402,
+            "ticketsRemaining": 583122,
             "ticketsPrinted": 16232400,
-            "currentEV": 135.22,
+            "currentEV": 135.38,
             "prizeTiers": [
               {
                 "prize": 2000000,
@@ -38,53 +38,53 @@
               },
               {
                 "prize": 500,
-                "remaining": 471,
-                "claimed": 17523
+                "remaining": 470,
+                "claimed": 17524
               },
               {
                 "prize": 200,
-                "remaining": 808,
-                "claimed": 26190
+                "remaining": 806,
+                "claimed": 26192
               },
               {
                 "prize": 100,
-                "remaining": 3910,
-                "claimed": 131238
+                "remaining": 3901,
+                "claimed": 131247
               },
               {
                 "prize": 50,
-                "remaining": 8194,
-                "claimed": 262161
+                "remaining": 8175,
+                "claimed": 262180
               },
               {
                 "prize": 30,
-                "remaining": 8020,
-                "claimed": 262402
+                "remaining": 8003,
+                "claimed": 262419
               },
               {
                 "prize": 25,
-                "remaining": 8350,
-                "claimed": 262260
+                "remaining": 8333,
+                "claimed": 262277
               },
               {
                 "prize": 20,
-                "remaining": 36971,
-                "claimed": 1045189
+                "remaining": 36887,
+                "claimed": 1045273
               },
               {
                 "prize": 15,
-                "remaining": 29797,
-                "claimed": 781865
+                "remaining": 29724,
+                "claimed": 781938
               },
               {
                 "prize": 10,
-                "remaining": 75502,
-                "claimed": 1818291
+                "remaining": 75347,
+                "claimed": 1818446
               },
               {
                 "prize": 0,
-                "remaining": 412163,
-                "claimed": 11036115
+                "remaining": 411261,
+                "claimed": 11037017
               }
             ]
           }
@@ -96,9 +96,9 @@
           "score": 98,
           "price": 30,
           "details": {
-            "ticketsRemaining": 4303012,
+            "ticketsRemaining": 4286111,
             "ticketsPrinted": 46804200,
-            "currentEV": 97.81,
+            "currentEV": 97.95,
             "prizeTiers": [
               {
                 "prize": 15000000,
@@ -137,33 +137,33 @@
               },
               {
                 "prize": 500,
-                "remaining": 17841,
-                "claimed": 177299
+                "remaining": 17770,
+                "claimed": 177370
               },
               {
                 "prize": 200,
-                "remaining": 36553,
-                "claimed": 353234
+                "remaining": 36422,
+                "claimed": 353365
               },
               {
                 "prize": 100,
-                "remaining": 144261,
-                "claimed": 1415879
+                "remaining": 143665,
+                "claimed": 1416475
               },
               {
                 "prize": 50,
-                "remaining": 668678,
-                "claimed": 6819953
+                "remaining": 666038,
+                "claimed": 6822593
               },
               {
                 "prize": 30,
-                "remaining": 591661,
-                "claimed": 5648560
+                "remaining": 589331,
+                "claimed": 5650890
               },
               {
                 "prize": 0,
-                "remaining": 2834601,
-                "claimed": 27997572
+                "remaining": 2823467,
+                "claimed": 28008706
               }
             ]
           }
@@ -175,9 +175,9 @@
           "score": 89,
           "price": 10,
           "details": {
-            "ticketsRemaining": 1034718,
+            "ticketsRemaining": 1034217,
             "ticketsPrinted": 30208140,
-            "currentEV": 89.3,
+            "currentEV": 89.32,
             "prizeTiers": [
               {
                 "prize": 2000000,
@@ -216,38 +216,38 @@
               },
               {
                 "prize": 100,
-                "remaining": 11175,
-                "claimed": 240474
+                "remaining": 11173,
+                "claimed": 240476
               },
               {
                 "prize": 50,
-                "remaining": 6028,
-                "claimed": 245349
+                "remaining": 6026,
+                "claimed": 245351
               },
               {
                 "prize": 40,
-                "remaining": 4148,
-                "claimed": 184680
+                "remaining": 4143,
+                "claimed": 184685
               },
               {
                 "prize": 20,
-                "remaining": 78444,
-                "claimed": 2438982
+                "remaining": 78400,
+                "claimed": 2439026
               },
               {
                 "prize": 15,
-                "remaining": 72514,
-                "claimed": 2444860
+                "remaining": 72478,
+                "claimed": 2444896
               },
               {
                 "prize": 10,
-                "remaining": 127844,
-                "claimed": 2892559
+                "remaining": 127786,
+                "claimed": 2892617
               },
               {
                 "prize": 0,
-                "remaining": 731178,
-                "claimed": 20615230
+                "remaining": 730824,
+                "claimed": 20615584
               }
             ]
           }
@@ -274,13 +274,6 @@
           "price": 50
         },
         {
-          "id": 575,
-          "name": "THE PERFECT GIFT",
-          "gameNumber": "7028",
-          "score": 80,
-          "price": 20
-        },
-        {
           "id": 2375,
           "name": "500X THE CASH",
           "gameNumber": "1627",
@@ -288,10 +281,10 @@
           "price": 50
         },
         {
-          "id": 259,
-          "name": "GOLD RUSH LEGACY",
-          "gameNumber": "1562",
-          "score": 79,
+          "id": 575,
+          "name": "THE PERFECT GIFT",
+          "gameNumber": "7028",
+          "score": 80,
           "price": 20
         },
         {
@@ -309,6 +302,13 @@
           "price": 50
         },
         {
+          "id": 259,
+          "name": "GOLD RUSH LEGACY",
+          "gameNumber": "1562",
+          "score": 79,
+          "price": 20
+        },
+        {
           "id": 2324,
           "name": "200X THE CASH",
           "gameNumber": "1623",
@@ -323,18 +323,18 @@
           "price": 5
         },
         {
+          "id": 2437,
+          "name": "$2,000,000 FORTUNE",
+          "gameNumber": "1630",
+          "score": 77,
+          "price": 10
+        },
+        {
           "id": 214,
           "name": "$5MM TRIPLE MATCH",
           "gameNumber": "1543",
           "score": 77,
           "price": 20
-        },
-        {
-          "id": 2328,
-          "name": "100X THE CASH",
-          "gameNumber": "1622",
-          "score": 77,
-          "price": 10
         },
         {
           "id": 241,
@@ -344,23 +344,16 @@
           "price": 10
         },
         {
-          "id": 2437,
-          "name": "$2,000,000 FORTUNE",
-          "gameNumber": "1630",
+          "id": 2328,
+          "name": "100X THE CASH",
+          "gameNumber": "1622",
           "score": 77,
           "price": 10
         },
         {
-          "id": 308,
-          "name": "$5M CROSSWORD CASH",
-          "gameNumber": "1539",
-          "score": 76,
-          "price": 20
-        },
-        {
-          "id": 701,
-          "name": "$5,000,000 CA$H MONEY",
-          "gameNumber": "1594",
+          "id": 2200,
+          "name": "$1,000,000 HOLIDAY CA$H",
+          "gameNumber": "1613",
           "score": 76,
           "price": 20
         },
@@ -372,9 +365,16 @@
           "price": 5
         },
         {
-          "id": 2200,
-          "name": "$1,000,000 HOLIDAY CA$H",
-          "gameNumber": "1613",
+          "id": 701,
+          "name": "$5,000,000 CA$H MONEY",
+          "gameNumber": "1594",
+          "score": 76,
+          "price": 20
+        },
+        {
+          "id": 308,
+          "name": "$5M CROSSWORD CASH",
+          "gameNumber": "1539",
           "score": 76,
           "price": 20
         },
@@ -414,27 +414,6 @@
           "price": 30
         },
         {
-          "id": 174,
-          "name": "MYSTERY MULTIPLIER",
-          "gameNumber": "7025",
-          "score": 74,
-          "price": 10
-        },
-        {
-          "id": 1039,
-          "name": "WIN IT ALL!",
-          "gameNumber": "1614",
-          "score": 74,
-          "price": 2
-        },
-        {
-          "id": 715,
-          "name": "GUY HARVEY $1M FLORIDA BIG BILLS",
-          "gameNumber": "1596",
-          "score": 74,
-          "price": 5
-        },
-        {
           "id": 557,
           "name": "$500,000 HOLIDAY BLOWOUT",
           "gameNumber": "1578",
@@ -447,6 +426,27 @@
           "gameNumber": "1618",
           "score": 74,
           "price": 10
+        },
+        {
+          "id": 715,
+          "name": "GUY HARVEY $1M FLORIDA BIG BILLS",
+          "gameNumber": "1596",
+          "score": 74,
+          "price": 5
+        },
+        {
+          "id": 174,
+          "name": "MYSTERY MULTIPLIER",
+          "gameNumber": "7025",
+          "score": 74,
+          "price": 10
+        },
+        {
+          "id": 1039,
+          "name": "WIN IT ALL!",
+          "gameNumber": "1614",
+          "score": 74,
+          "price": 2
         },
         {
           "id": 500,
@@ -470,16 +470,16 @@
           "price": 10
         },
         {
-          "id": 365,
-          "name": "JEOPARDY",
-          "gameNumber": "5056",
+          "id": 2399,
+          "name": "AMERICA 250 FLORIDA",
+          "gameNumber": "1635",
           "score": 72,
           "price": 5
         },
         {
-          "id": 2399,
-          "name": "AMERICA 250 FLORIDA",
-          "gameNumber": "1635",
+          "id": 365,
+          "name": "JEOPARDY",
+          "gameNumber": "5056",
           "score": 72,
           "price": 5
         },
@@ -489,6 +489,20 @@
           "gameNumber": "1568",
           "score": 71,
           "price": 10
+        },
+        {
+          "id": 427,
+          "name": "$20 MONOPOLY™ SECRET VAULT",
+          "gameNumber": "1569",
+          "score": 71,
+          "price": 20
+        },
+        {
+          "id": 664,
+          "name": "$25, $50 OR $100",
+          "gameNumber": "1589",
+          "score": 71,
+          "price": 5
         },
         {
           "id": 2327,
@@ -505,30 +519,23 @@
           "price": 5
         },
         {
-          "id": 664,
-          "name": "$25, $50 OR $100",
-          "gameNumber": "1589",
-          "score": 71,
-          "price": 5
-        },
-        {
-          "id": 427,
-          "name": "$20 MONOPOLY™ SECRET VAULT",
-          "gameNumber": "1569",
-          "score": 71,
-          "price": 20
-        },
-        {
-          "id": 434,
-          "name": "HIT AND WIN!",
-          "gameNumber": "1542",
+          "id": 82,
+          "name": "20X THE CASH",
+          "gameNumber": "5027",
           "score": 70,
-          "price": 5
+          "price": 2
         },
         {
           "id": 224,
           "name": "EMERALD MINE 9X",
           "gameNumber": "5055",
+          "score": 70,
+          "price": 5
+        },
+        {
+          "id": 434,
+          "name": "HIT AND WIN!",
+          "gameNumber": "1542",
           "score": 70,
           "price": 5
         },
@@ -547,44 +554,9 @@
           "price": 5
         },
         {
-          "id": 82,
-          "name": "20X THE CASH",
-          "gameNumber": "5027",
-          "score": 70,
-          "price": 2
-        },
-        {
-          "id": 527,
-          "name": "SILVER STREAK",
-          "gameNumber": "1573",
-          "score": 69,
-          "price": 10
-        },
-        {
-          "id": 2270,
-          "name": "LOTERIA",
-          "gameNumber": "1616",
-          "score": 69,
-          "price": 3
-        },
-        {
-          "id": 590,
-          "name": "TRIPLE GOLDEN CHERRIES",
-          "gameNumber": "5054",
-          "score": 69,
-          "price": 5
-        },
-        {
-          "id": 289,
-          "name": "QUICK $100S",
-          "gameNumber": "1587",
-          "score": 69,
-          "price": 2
-        },
-        {
-          "id": 2272,
-          "name": "BONUS BOX BINGO",
-          "gameNumber": "1617",
+          "id": 2136,
+          "name": "$150,000 CROSSWORD BONUS",
+          "gameNumber": "1605",
           "score": 69,
           "price": 3
         },
@@ -596,17 +568,38 @@
           "price": 2
         },
         {
-          "id": 2136,
-          "name": "$150,000 CROSSWORD BONUS",
-          "gameNumber": "1605",
+          "id": 2272,
+          "name": "BONUS BOX BINGO",
+          "gameNumber": "1617",
           "score": 69,
           "price": 3
         },
         {
-          "id": 681,
-          "name": "MONEY MATCH",
-          "gameNumber": "1593",
-          "score": 68,
+          "id": 2270,
+          "name": "LOTERIA",
+          "gameNumber": "1616",
+          "score": 69,
+          "price": 3
+        },
+        {
+          "id": 289,
+          "name": "QUICK $100S",
+          "gameNumber": "1587",
+          "score": 69,
+          "price": 2
+        },
+        {
+          "id": 527,
+          "name": "SILVER STREAK",
+          "gameNumber": "1573",
+          "score": 69,
+          "price": 10
+        },
+        {
+          "id": 590,
+          "name": "TRIPLE GOLDEN CHERRIES",
+          "gameNumber": "5054",
+          "score": 69,
           "price": 5
         },
         {
@@ -617,11 +610,18 @@
           "price": 2
         },
         {
-          "id": 194,
-          "name": "LUCKY NUMBERS",
-          "gameNumber": "1524",
-          "score": 67,
+          "id": 681,
+          "name": "MONEY MATCH",
+          "gameNumber": "1593",
+          "score": 68,
           "price": 5
+        },
+        {
+          "id": 128,
+          "name": "$2 GOLD RUSH DOUBLER",
+          "gameNumber": "1526",
+          "score": 67,
+          "price": 2
         },
         {
           "id": 2202,
@@ -638,23 +638,9 @@
           "price": 5
         },
         {
-          "id": 628,
-          "name": "PLATINUM MINE 9X",
-          "gameNumber": "1581",
-          "score": 67,
-          "price": 5
-        },
-        {
           "id": 2325,
           "name": "20X THE CASH",
           "gameNumber": "1620",
-          "score": 67,
-          "price": 2
-        },
-        {
-          "id": 2377,
-          "name": "LUCKY CLOVERS",
-          "gameNumber": "1625",
           "score": 67,
           "price": 2
         },
@@ -666,18 +652,25 @@
           "price": 2
         },
         {
-          "id": 128,
-          "name": "$2 GOLD RUSH DOUBLER",
-          "gameNumber": "1526",
+          "id": 2377,
+          "name": "LUCKY CLOVERS",
+          "gameNumber": "1625",
           "score": 67,
           "price": 2
         },
         {
-          "id": 633,
-          "name": "ULTIMATE VIP CASHWORD",
-          "gameNumber": "1582",
-          "score": 66,
-          "price": 10
+          "id": 194,
+          "name": "LUCKY NUMBERS",
+          "gameNumber": "1524",
+          "score": 67,
+          "price": 5
+        },
+        {
+          "id": 628,
+          "name": "PLATINUM MINE 9X",
+          "gameNumber": "1581",
+          "score": 67,
+          "price": 5
         },
         {
           "id": 551,
@@ -701,18 +694,18 @@
           "price": 2
         },
         {
+          "id": 633,
+          "name": "ULTIMATE VIP CASHWORD",
+          "gameNumber": "1582",
+          "score": 66,
+          "price": 10
+        },
+        {
           "id": 375,
           "name": "WIN WIN WIN",
           "gameNumber": "1560",
           "score": 66,
           "price": 2
-        },
-        {
-          "id": 317,
-          "name": "BINGO NIGHT",
-          "gameNumber": "1549",
-          "score": 65,
-          "price": 3
         },
         {
           "id": 351,
@@ -729,11 +722,11 @@
           "price": 2
         },
         {
-          "id": 484,
-          "name": "TRIPLE JACKPOT",
-          "gameNumber": "1572",
+          "id": 317,
+          "name": "BINGO NIGHT",
+          "gameNumber": "1549",
           "score": 65,
-          "price": 10
+          "price": 3
         },
         {
           "id": 510,
@@ -741,6 +734,13 @@
           "gameNumber": "5060",
           "score": 65,
           "price": 2
+        },
+        {
+          "id": 484,
+          "name": "TRIPLE JACKPOT",
+          "gameNumber": "1572",
+          "score": 65,
+          "price": 10
         },
         {
           "id": 622,
@@ -764,18 +764,18 @@
           "price": 2
         },
         {
-          "id": 614,
-          "name": "LUCKY GREEN",
-          "gameNumber": "1556",
-          "score": 62,
-          "price": 2
-        },
-        {
           "id": 669,
           "name": "5 TIMES LUCKY",
           "gameNumber": "1588",
           "score": 62,
           "price": 5
+        },
+        {
+          "id": 614,
+          "name": "LUCKY GREEN",
+          "gameNumber": "1556",
+          "score": 62,
+          "price": 2
         },
         {
           "id": 2326,
@@ -820,6 +820,13 @@
           "price": 3
         },
         {
+          "id": 38,
+          "name": "CA$H ON THE SPOT",
+          "gameNumber": "5050",
+          "score": 58,
+          "price": 1
+        },
+        {
           "id": 707,
           "name": "LOTERIA",
           "gameNumber": "1580",
@@ -834,23 +841,16 @@
           "price": 3
         },
         {
-          "id": 38,
-          "name": "CA$H ON THE SPOT",
-          "gameNumber": "5050",
-          "score": 58,
+          "id": 567,
+          "name": "$5,000 HOLIDAY BLOWOUT",
+          "gameNumber": "1575",
+          "score": 57,
           "price": 1
         },
         {
           "id": 391,
           "name": "FAST BUCKS",
           "gameNumber": "1540",
-          "score": 57,
-          "price": 1
-        },
-        {
-          "id": 567,
-          "name": "$5,000 HOLIDAY BLOWOUT",
-          "gameNumber": "1575",
           "score": 57,
           "price": 1
         },
@@ -890,18 +890,18 @@
           "price": 1
         },
         {
-          "id": 29,
-          "name": "TRIPLE CROSSWORD",
-          "gameNumber": "1497",
-          "score": 51,
-          "price": 3
-        },
-        {
           "id": 451,
           "name": "MILLIONAIRE MAKER",
           "gameNumber": "5058",
           "score": 51,
           "price": 5
+        },
+        {
+          "id": 29,
+          "name": "TRIPLE CROSSWORD",
+          "gameNumber": "1497",
+          "score": 51,
+          "price": 3
         },
         {
           "id": 1040,
@@ -923,9 +923,9 @@
           "score": 87,
           "price": 30,
           "details": {
-            "ticketsRemaining": 7241525,
+            "ticketsRemaining": 7222155,
             "ticketsPrinted": 15196980,
-            "currentEV": 86.92,
+            "currentEV": 86.99,
             "prizeTiers": [
               {
                 "prize": 10000000,
@@ -959,43 +959,43 @@
               },
               {
                 "prize": 500,
-                "remaining": 12113,
-                "claimed": 13237
+                "remaining": 12090,
+                "claimed": 13260
               },
               {
                 "prize": 400,
-                "remaining": 11907,
-                "claimed": 13409
+                "remaining": 11878,
+                "claimed": 13438
               },
               {
                 "prize": 200,
-                "remaining": 47899,
-                "claimed": 53296
+                "remaining": 47782,
+                "claimed": 53413
               },
               {
                 "prize": 100,
-                "remaining": 317240,
-                "claimed": 351471
+                "remaining": 316408,
+                "claimed": 352303
               },
               {
                 "prize": 50,
-                "remaining": 337639,
-                "claimed": 371721
+                "remaining": 336705,
+                "claimed": 372655
               },
               {
                 "prize": 40,
-                "remaining": 724597,
-                "claimed": 794974
+                "remaining": 722715,
+                "claimed": 796856
               },
               {
                 "prize": 30,
-                "remaining": 1207947,
-                "claimed": 1324773
+                "remaining": 1204627,
+                "claimed": 1328093
               },
               {
                 "prize": 0,
-                "remaining": 4573472,
-                "claimed": 5024362
+                "remaining": 4561238,
+                "claimed": 5036596
               }
             ]
           }
@@ -1007,9 +1007,9 @@
           "score": 86,
           "price": 20,
           "details": {
-            "ticketsRemaining": 3346634,
+            "ticketsRemaining": 3340533,
             "ticketsPrinted": 12087240,
-            "currentEV": 86.39,
+            "currentEV": 86.43,
             "prizeTiers": [
               {
                 "prize": 5000000,
@@ -1048,53 +1048,53 @@
               },
               {
                 "prize": 400,
-                "remaining": 5433,
-                "claimed": 14675
+                "remaining": 5424,
+                "claimed": 14684
               },
               {
                 "prize": 300,
-                "remaining": 8182,
-                "claimed": 21946
+                "remaining": 8168,
+                "claimed": 21960
               },
               {
                 "prize": 200,
-                "remaining": 23316,
-                "claimed": 57249
+                "remaining": 23268,
+                "claimed": 57297
               },
               {
                 "prize": 100,
-                "remaining": 93027,
-                "claimed": 247964
+                "remaining": 92847,
+                "claimed": 248144
               },
               {
                 "prize": 60,
-                "remaining": 110446,
-                "claimed": 292670
+                "remaining": 110236,
+                "claimed": 292880
               },
               {
                 "prize": 50,
-                "remaining": 110544,
-                "claimed": 292364
+                "remaining": 110332,
+                "claimed": 292576
               },
               {
                 "prize": 40,
-                "remaining": 110280,
-                "claimed": 292628
+                "remaining": 110082,
+                "claimed": 292826
               },
               {
                 "prize": 30,
-                "remaining": 110692,
-                "claimed": 292216
+                "remaining": 110505,
+                "claimed": 292403
               },
               {
                 "prize": 20,
-                "remaining": 339616,
-                "claimed": 869108
+                "remaining": 339010,
+                "claimed": 869714
               },
               {
                 "prize": 0,
-                "remaining": 2433892,
-                "claimed": 6356743
+                "remaining": 2429455,
+                "claimed": 6361180
               }
             ]
           }
@@ -1106,9 +1106,9 @@
           "score": 86,
           "price": 25,
           "details": {
-            "ticketsRemaining": 4216303,
+            "ticketsRemaining": 4201878,
             "ticketsPrinted": 9191940,
-            "currentEV": 86.02,
+            "currentEV": 86.08,
             "prizeTiers": [
               {
                 "prize": 7500000,
@@ -1137,48 +1137,48 @@
               },
               {
                 "prize": 500,
-                "remaining": 3514,
-                "claimed": 4196
+                "remaining": 3497,
+                "claimed": 4213
               },
               {
                 "prize": 250,
-                "remaining": 38619,
-                "claimed": 45826
+                "remaining": 38489,
+                "claimed": 45956
               },
               {
                 "prize": 150,
-                "remaining": 13996,
-                "claimed": 16780
+                "remaining": 13947,
+                "claimed": 16829
               },
               {
                 "prize": 100,
-                "remaining": 27987,
-                "claimed": 33454
+                "remaining": 27900,
+                "claimed": 33541
               },
               {
                 "prize": 75,
-                "remaining": 87254,
-                "claimed": 104725
+                "remaining": 86942,
+                "claimed": 105037
               },
               {
                 "prize": 50,
-                "remaining": 419175,
-                "claimed": 500019
+                "remaining": 417727,
+                "claimed": 501467
               },
               {
                 "prize": 40,
-                "remaining": 280757,
-                "claimed": 332039
+                "remaining": 279774,
+                "claimed": 333022
               },
               {
                 "prize": 25,
-                "remaining": 566011,
-                "claimed": 659581
+                "remaining": 564114,
+                "claimed": 661478
               },
               {
                 "prize": 0,
-                "remaining": 2777392,
-                "claimed": 3277586
+                "remaining": 2767890,
+                "claimed": 3287088
               }
             ]
           }
@@ -1191,16 +1191,16 @@
           "price": 20
         },
         {
-          "id": 719,
-          "name": "Instant Prize Crossword",
-          "gameNumber": "1682",
+          "id": 2279,
+          "name": "$5,000,000 Superstar",
+          "gameNumber": "1709",
           "score": 82,
           "price": 20
         },
         {
-          "id": 2279,
-          "name": "$5,000,000 Superstar",
-          "gameNumber": "1709",
+          "id": 719,
+          "name": "Instant Prize Crossword",
+          "gameNumber": "1682",
           "score": 82,
           "price": 20
         },
@@ -1219,9 +1219,30 @@
           "price": 20
         },
         {
+          "id": 2133,
+          "name": "100X",
+          "gameNumber": "1696",
+          "score": 80,
+          "price": 20
+        },
+        {
+          "id": 2448,
+          "name": "Crossword Xtreme",
+          "gameNumber": "1726",
+          "score": 80,
+          "price": 30
+        },
+        {
           "id": 342,
           "name": "Instant Prize Crossword",
           "gameNumber": "1634",
+          "score": 80,
+          "price": 20
+        },
+        {
+          "id": 2335,
+          "name": "Red Carpet Riches",
+          "gameNumber": "1714",
           "score": 80,
           "price": 20
         },
@@ -1233,53 +1254,11 @@
           "price": 40
         },
         {
-          "id": 2448,
-          "name": "Crossword Xtreme",
-          "gameNumber": "1726",
-          "score": 80,
-          "price": 30
-        },
-        {
-          "id": 2335,
-          "name": "Red Carpet Riches",
-          "gameNumber": "1714",
-          "score": 80,
-          "price": 20
-        },
-        {
-          "id": 2133,
-          "name": "100X",
-          "gameNumber": "1696",
-          "score": 80,
-          "price": 20
-        },
-        {
           "id": 565,
           "name": "40 Years of Play!",
           "gameNumber": "1660",
           "score": 79,
           "price": 40
-        },
-        {
-          "id": 2278,
-          "name": "Mystery Crossword",
-          "gameNumber": "1708",
-          "score": 78,
-          "price": 10
-        },
-        {
-          "id": 1367,
-          "name": "Los Angeles Chargers",
-          "gameNumber": "1691",
-          "score": 78,
-          "price": 10
-        },
-        {
-          "id": 692,
-          "name": "Show Me $5,000,000!",
-          "gameNumber": "1678",
-          "score": 78,
-          "price": 20
         },
         {
           "id": 68,
@@ -1294,6 +1273,27 @@
           "gameNumber": "1668",
           "score": 78,
           "price": 10
+        },
+        {
+          "id": 1367,
+          "name": "Los Angeles Chargers",
+          "gameNumber": "1691",
+          "score": 78,
+          "price": 10
+        },
+        {
+          "id": 2278,
+          "name": "Mystery Crossword",
+          "gameNumber": "1708",
+          "score": 78,
+          "price": 10
+        },
+        {
+          "id": 692,
+          "name": "Show Me $5,000,000!",
+          "gameNumber": "1678",
+          "score": 78,
+          "price": 20
         },
         {
           "id": 1004,
@@ -1317,13 +1317,6 @@
           "price": 10
         },
         {
-          "id": 58,
-          "name": "$10,000,000 Super Bonus",
-          "gameNumber": "1586",
-          "score": 76,
-          "price": 30
-        },
-        {
           "id": 2333,
           "name": "$1,000,000 Money Mania",
           "gameNumber": "1713",
@@ -1331,18 +1324,18 @@
           "price": 10
         },
         {
+          "id": 58,
+          "name": "$10,000,000 Super Bonus",
+          "gameNumber": "1586",
+          "score": 76,
+          "price": 30
+        },
+        {
           "id": 2407,
           "name": "California Color Pop",
           "gameNumber": "1721",
           "score": 76,
           "price": 10
-        },
-        {
-          "id": 594,
-          "name": "Cash King",
-          "gameNumber": "1664",
-          "score": 75,
-          "price": 20
         },
         {
           "id": 2447,
@@ -1359,6 +1352,13 @@
           "price": 5
         },
         {
+          "id": 594,
+          "name": "Cash King",
+          "gameNumber": "1664",
+          "score": 75,
+          "price": 20
+        },
+        {
           "id": 2235,
           "name": "LOTERIA™ Grande",
           "gameNumber": "1704",
@@ -1369,7 +1369,7 @@
           "id": 1003,
           "name": "Power 10's",
           "gameNumber": "1686",
-          "score": 74,
+          "score": 75,
           "price": 10
         },
         {
@@ -1380,13 +1380,6 @@
           "price": 10
         },
         {
-          "id": 271,
-          "name": "Royal Riches",
-          "gameNumber": "1625",
-          "score": 73,
-          "price": 30
-        },
-        {
           "id": 2132,
           "name": "California Jackpot",
           "gameNumber": "1695",
@@ -1394,16 +1387,23 @@
           "price": 10
         },
         {
-          "id": 712,
-          "name": "$50 or $100!",
-          "gameNumber": "1681",
-          "score": 72,
-          "price": 10
+          "id": 271,
+          "name": "Royal Riches",
+          "gameNumber": "1625",
+          "score": 73,
+          "price": 30
         },
         {
           "id": 367,
           "name": "$100 Million Mega Cash",
           "gameNumber": "1637",
+          "score": 72,
+          "price": 10
+        },
+        {
+          "id": 712,
+          "name": "$50 or $100!",
+          "gameNumber": "1681",
           "score": 72,
           "price": 10
         },
@@ -1415,18 +1415,18 @@
           "price": 5
         },
         {
-          "id": 254,
-          "name": "The Big Spin",
-          "gameNumber": "1623",
-          "score": 71,
-          "price": 5
-        },
-        {
           "id": 2191,
           "name": "Merry Multiplier",
           "gameNumber": "1699",
           "score": 71,
           "price": 10
+        },
+        {
+          "id": 254,
+          "name": "The Big Spin",
+          "gameNumber": "1623",
+          "score": 71,
+          "price": 5
         },
         {
           "id": 549,
@@ -1443,13 +1443,6 @@
           "price": 5
         },
         {
-          "id": 2130,
-          "name": "Poker Nights",
-          "gameNumber": "1694",
-          "score": 69,
-          "price": 5
-        },
-        {
           "id": 2365,
           "name": "MEGA Crossword",
           "gameNumber": "1717",
@@ -1457,10 +1450,10 @@
           "price": 5
         },
         {
-          "id": 2233,
-          "name": "Full of 500's",
-          "gameNumber": "1703",
-          "score": 68,
+          "id": 2130,
+          "name": "Poker Nights",
+          "gameNumber": "1694",
+          "score": 69,
           "price": 5
         },
         {
@@ -1471,6 +1464,13 @@
           "price": 2
         },
         {
+          "id": 643,
+          "name": "50X The Cash",
+          "gameNumber": "1671",
+          "score": 68,
+          "price": 10
+        },
+        {
           "id": 2334,
           "name": "Cash Crush",
           "gameNumber": "1712",
@@ -1478,11 +1478,11 @@
           "price": 5
         },
         {
-          "id": 643,
-          "name": "50X The Cash",
-          "gameNumber": "1671",
+          "id": 2233,
+          "name": "Full of 500's",
+          "gameNumber": "1703",
           "score": 68,
-          "price": 10
+          "price": 5
         },
         {
           "id": 618,
@@ -1499,9 +1499,9 @@
           "price": 10
         },
         {
-          "id": 2445,
-          "name": "Dominoes",
-          "gameNumber": "1723",
+          "id": 2331,
+          "name": "$pring Green",
+          "gameNumber": "1710",
           "score": 66,
           "price": 2
         },
@@ -1513,9 +1513,9 @@
           "price": 2
         },
         {
-          "id": 2331,
-          "name": "$pring Green",
-          "gameNumber": "1710",
+          "id": 2445,
+          "name": "Dominoes",
+          "gameNumber": "1723",
           "score": 66,
           "price": 2
         },
@@ -1525,6 +1525,13 @@
           "gameNumber": "1711",
           "score": 65,
           "price": 3
+        },
+        {
+          "id": 1366,
+          "name": "Los Angeles Rams",
+          "gameNumber": "1690",
+          "score": 65,
+          "price": 10
         },
         {
           "id": 602,
@@ -1539,13 +1546,6 @@
           "gameNumber": "1720",
           "score": 65,
           "price": 3
-        },
-        {
-          "id": 1366,
-          "name": "Los Angeles Rams",
-          "gameNumber": "1690",
-          "score": 65,
-          "price": 10
         },
         {
           "id": 326,
@@ -1583,9 +1583,9 @@
           "price": 5
         },
         {
-          "id": 610,
-          "name": "LOTERIA™",
-          "gameNumber": "1666",
+          "id": 1001,
+          "name": "15X",
+          "gameNumber": "1684",
           "score": 63,
           "price": 3
         },
@@ -1597,13 +1597,6 @@
           "price": 2
         },
         {
-          "id": 1001,
-          "name": "15X",
-          "gameNumber": "1684",
-          "score": 63,
-          "price": 3
-        },
-        {
           "id": 2363,
           "name": "Four Leaf Frenzy",
           "gameNumber": "1715",
@@ -1611,11 +1604,11 @@
           "price": 1
         },
         {
-          "id": 666,
-          "name": "Straight 8's",
-          "gameNumber": "1674",
-          "score": 62,
-          "price": 1
+          "id": 610,
+          "name": "LOTERIA™",
+          "gameNumber": "1666",
+          "score": 63,
+          "price": 3
         },
         {
           "id": 2232,
@@ -1623,6 +1616,13 @@
           "gameNumber": "1702",
           "score": 62,
           "price": 3
+        },
+        {
+          "id": 666,
+          "name": "Straight 8's",
+          "gameNumber": "1674",
+          "score": 62,
+          "price": 1
         },
         {
           "id": 677,
@@ -1660,11 +1660,11 @@
           "price": 3
         },
         {
-          "id": 2276,
-          "name": "Year of the Horse",
-          "gameNumber": "1706",
+          "id": 588,
+          "name": "Hot Spot Multiplier",
+          "gameNumber": "1663",
           "score": 59,
-          "price": 1
+          "price": 5
         },
         {
           "id": 17,
@@ -1674,11 +1674,11 @@
           "price": 1
         },
         {
-          "id": 588,
-          "name": "Hot Spot Multiplier",
-          "gameNumber": "1663",
+          "id": 2276,
+          "name": "Year of the Horse",
+          "gameNumber": "1706",
           "score": 59,
-          "price": 5
+          "price": 1
         },
         {
           "id": 2277,
